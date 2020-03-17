@@ -3,9 +3,9 @@ import fetch from 'fetch';
 
 export default class TestRoute extends Route {
   model() {
-    let url = 'http://localhost:3000/users';
+    let url = 'http://localhost:3000/todos';
     return fetch(url).then(function (response) {
-      console.log(response)
+      //console.log(response)
       return response.json();
     });
   }

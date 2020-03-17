@@ -1,4 +1,9 @@
 <h1>TODO TEST</h1>
+<form onsubmit={{action "submitAction"}}>
+  {{input type="text" id="inputTodo" placeholder="Add Todo"}}
+  {{!-- <input type="text" value="inputTodo" placeholder="Add Todo"> --}}
+  <input type="submit">
+</form>
 <ul>
   {{#each model as | todo |}}
   <li>{{todo.task}}</li>
