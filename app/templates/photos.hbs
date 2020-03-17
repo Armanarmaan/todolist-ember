@@ -1,0 +1,8 @@
+<h1>Photos</h1>
+{{#each @model.photos as |photo|}}
+  <p>
+    <LinkTo @route="photo" @model={{photo.id}}>
+      <p>{{photo.task}}</p>
+    </LinkTo>
+  </p>
+{{/each}}

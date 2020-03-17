@@ -1,0 +1,20 @@
+<form {{action 'submitAction' on='submit'}}>
+    <div class="form-group">
+        <h3>ToDos!</h3>
+    </div>
+    <div class="form-group">
+        <p>
+        Input new Task: {{input type='text' value=task}}
+        </p>
+    </div>
+    <p>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <br><br><br>
+        <ul>
+            {{#each todo as |todos|}}
+                <li><strong>{{todos.task}}</strong> - {{todos.status}}</li>
+            {{/each}}
+        </ul>
+    </p>
+    
+</form>
