@@ -10,4 +10,5 @@ Router.map(function() {
   this.route('todo');
   this.route('favorite-posts');
   this.route('photos');
+  this.route('test');
 });
