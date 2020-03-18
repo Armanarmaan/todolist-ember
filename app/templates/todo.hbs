@@ -11,10 +11,10 @@
         <button class="btn btn-primary" type="submit">Submit</button>
         <br><br><br>
         <ul>
-            {{#each todo as |todos|}}
-                <li><strong>{{todos.task}}</strong> - {{todos.status}}</li>
+            {{#each model as | todo |}}
+                <li>{{todo.task}}</li>
             {{/each}}
         </ul>
     </p>
-    
+
 </form>

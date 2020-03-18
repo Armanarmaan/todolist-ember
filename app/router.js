@@ -7,7 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+
   this.route('todo');
-  this.route('favorite-posts');
-  this.route('photos');
+  
 });
