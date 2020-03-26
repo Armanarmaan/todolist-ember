@@ -1,20 +1,18 @@
-<form {{action 'submitAction' on='submit'}}>
-    <div class="form-group">
-        <h3>ToDos!</h3>
-    </div>
+<h3 align="center">ToDos!</h3><br>
+<div class="row">
+    <div class="col-md-6" align="right">
+    <form {{action 'submitAction' on='submit'}}>
     <div class="form-group">
         <p>
-        Input new Task: {{input type='text' value=task}}
+        <h5>Task :  {{input type='text' value=task}} </h5>
         </p>
     </div>
     <p>
         <button class="btn btn-primary" type="submit">Submit</button>
-        <br><br><br>
-        <ul>
-            {{#each model as | todo |}}
-                <li>{{todo.task}}</li>
-            {{/each}}
-        </ul>
     </p>
-
-</form>
+    </form>
+    </div>
+    <div class="col-md-6">
+        <TodosComp @tasks={{model}} />
+    </div>
+</div>

@@ -4,13 +4,11 @@ export default class TodoController extends Controller {
     actions={
         submitAction: function(){
 
-            var newTask = this.get('task');
+            let task = this.get('task');
 
-            alert('New Task : '+ newTask);
+            //alert('New Task : '+ task);
             
             const data = { task: this.get('task') };
-
-            
 
             let url = 'http://localhost:3000/todos';
 
@@ -29,7 +27,10 @@ export default class TodoController extends Controller {
                 console.error('Error:', error);
             });
 
-            window.location.reload(true);
+            this.send('refresh')
+            this.setProperties({
+                task : ''
+            })
         }
     }
 }
